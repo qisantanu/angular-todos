@@ -1,4 +1,6 @@
 <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+
+<div class="mx-4 todo-list-section" style="width: 400px;">
 <h4>Your todos</h4>
 <div *ngIf="this.todos.length===0; else elseBlock">No todos to display</div>
 <ng-template #elseBlock>
@@ -6,4 +8,4 @@
     <app-todo-item [todo]="todo" [ind]="ind" (todoDelete)="deleteTodo(todo)" (todoMakeComplete)="doneTodo(todo)"></app-todo-item>
   </div>
 </ng-template>
-
+</div>

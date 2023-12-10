@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { Todo } from '../../Todo';
 import { AddTodoComponent } from '../add-todo/add-todo.component';
@@ -6,7 +7,7 @@ import { AddTodoComponent } from '../add-todo/add-todo.component';
 @Component({
   selector: 'app-todo-item',
   standalone: true,
-  imports: [AddTodoComponent],
+  imports: [AddTodoComponent, CommonModule],
   templateUrl: './todo-item.component.html',
   styleUrl: './todo-item.component.css'
 })
