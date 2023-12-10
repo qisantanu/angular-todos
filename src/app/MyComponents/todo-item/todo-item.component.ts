@@ -1,11 +1,12 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-//import * as EventEmitter from "node:events";
+
 import { Todo } from '../../Todo';
+import { AddTodoComponent } from '../add-todo/add-todo.component';
 
 @Component({
   selector: 'app-todo-item',
   standalone: true,
-  imports: [],
+  imports: [AddTodoComponent],
   templateUrl: './todo-item.component.html',
   styleUrl: './todo-item.component.css'
 })

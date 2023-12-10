@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
+import { AddTodoComponent } from '../add-todo/add-todo.component';
 
 import {Todo} from '../../Todo';
 
 @Component({
   selector: 'app-todos',
   standalone: true,
-  imports: [CommonModule, TodoItemComponent],
+  imports: [CommonModule, TodoItemComponent, AddTodoComponent],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.css'
 })
@@ -43,5 +44,10 @@ export class TodosComponent {
     console.log(todo);
     const index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
+  }
+
+  addTodo(todo:Todo) {
+    console.log(todo);
+    this.todos.push(todo);
   }
 }
