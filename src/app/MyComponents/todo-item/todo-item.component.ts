@@ -12,7 +12,9 @@ import { AddTodoComponent } from '../add-todo/add-todo.component';
 })
 export class TodoItemComponent {
   @Input() todo: Todo;
+  @Input() ind; number;
   @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
+  @Output() todoMakeComplete: EventEmitter<Todo> = new EventEmitter();
   
   ngOnInit(): void {}
 
@@ -23,5 +25,10 @@ export class TodoItemComponent {
   onClick(todo: Todo) {
     this.todoDelete.emit(todo);
     console.log('delete buttin has been triggered');
+  }
+
+  onCheckboxClick(todo: Todo) {
+    this.todoMakeComplete.emit(todo);
+    console.log('done todo check box triggered');
   }
 }

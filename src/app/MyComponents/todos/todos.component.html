@@ -2,8 +2,8 @@
 <h4>Your todos</h4>
 <div *ngIf="this.todos.length===0; else elseBlock">No todos to display</div>
 <ng-template #elseBlock>
-  <div *ngFor="let todo of todos">
-    <app-todo-item [todo]="todo" (todoDelete)="deleteTodo(todo)"></app-todo-item>
+  <div *ngFor="let todo of todos; index as ind">
+    <app-todo-item [todo]="todo" [ind]="ind" (todoDelete)="deleteTodo(todo)" (todoMakeComplete)="doneTodo(todo)"></app-todo-item>
   </div>
 </ng-template>
 
