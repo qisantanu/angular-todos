@@ -13,6 +13,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
+        <li>
+          <a routerLink="/todo" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">todo</a>
+        </li>
+        <li>
+          <a routerLink="/dashboard" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">Dashboardp</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown
@@ -35,6 +41,6 @@
   <div class="'container">
     <h1 class="text-center mb3">Todo application with Angular</h1>
     
-    <app-todos></app-todos>
+    <router-outlet></router-outlet>
   </div>
 </div>
